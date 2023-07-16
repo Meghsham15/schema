@@ -1,7 +1,7 @@
-const getOne = {
-  id: "ehh-ent-pro-gon-p",
-  name: "Get One project",
-  description: "Get One project",
+const getOneMilstone = {
+    id: "ehh-ent-pro-gon-m",
+  name: "Get One milstone",
+  description: "Get One milstone",
   model: {
     type: "object",
     properties: {
@@ -15,6 +15,6 @@ const getOne = {
     resourceType: "externalApi",
     host: "http://localhost:4000",
   },
-};
+}
 
-export { getOne };
+export {getOneMilstone};

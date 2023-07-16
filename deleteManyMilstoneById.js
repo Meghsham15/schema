@@ -1,22 +1,20 @@
-const deleteMany = {
-  id: "ehh-ent-pro-dmn",
-  name: "Delete Many Projects",
+const deleteManyMilstoneById ={
+    id: "ehh-ent-pro-dmn-m",
+  name: "Delete Many milstones by id ",
   description: "",
-  authentication: true,
-  authorisation: [],
   model: {
     type: "object",
     properties: {
       _id: {
-        type: "string",
+        type: "Array",
       },
     },
   },
-  actions: ["delete"],
+  actions: ["delete","deleteMany"],
   resource: {
     resourceType: "externalApi",
         host: "http://localhost:4000",
   },
 };
 
-export { deleteMany };
+export {deleteManyMilstoneById};

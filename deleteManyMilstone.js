@@ -1,13 +1,13 @@
-const deleteMany = {
-  id: "ehh-ent-pro-dmn",
-  name: "Delete Many Projects",
+const deleteManyMilstone = {
+    id: "ehh-ent-pro-dmn-m",
+  name: "Delete Many milstone",
   description: "",
   authentication: true,
   authorisation: [],
   model: {
     type: "object",
     properties: {
-      _id: {
+      name: {
         type: "string",
       },
     },
@@ -19,4 +19,4 @@ const deleteMany = {
   },
 };
 
-export { deleteMany };
+export {deleteManyMilstone};

@@ -1,7 +1,7 @@
-const getManyProject = {
-  id: "ehh-ent-pro-gmp",
-  name: "Get Many projects",
-  description: "Get Many projects",
+const getOneMilstoneById = {
+    id: "ehh-ent-pro-gid-m",
+  name: "Get One milstone By Id",
+  description: "",
   model: {
     type: "object",
     properties: {
@@ -10,11 +10,12 @@ const getManyProject = {
       }
     },
   },
-  actions: ["get"],
+  actions: ["getOneById", "getOne"],
   resource: {
+   
     resourceType: "externalApi",
     host: "http://localhost:4000",
   },
-};
+}
 
-export { getManyProject };
+export {getOneMilstoneById};
