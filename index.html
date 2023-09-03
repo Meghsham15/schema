@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<h1>hello</h1>
+<body>
+
+</body>
+<script>
+    function getReq() {
+        // The URL you want to fetch
+        const url = 'https://appsail-50015425365.development.catalystappsail.in/';
+
+        // Use the fetch function to make the GET request
+        fetch(url)
+            .then(response => {
+                // Check if the request was successful
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                // Handle the JSON data here
+                console.log(data);
+            })
+            .catch(error => {
+                // Handle errors, like network issues or invalid JSON
+                console.log('There was a problem with the fetch operation:', error.message);
+            });
+    }
+
+    function postReq() {
+        // The URL you want to post to
+        // const url = 'https://appsail-50015425365.development.catalystappsail.in/';
+        const url = 'https://appsail-50015425365.development.catalystappsail.in';
+
+        // The data you want to send in the POST request
+        const postData = {
+            model: "gpt-3.5-turbo",
+            message: "js program for addition",
+            // ... any other key-value pairs
+        };
+
+        // Use the fetch function to make the POST request
+        fetch(url, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                
+            },
+            body: JSON.stringify(postData)  // Convert the postData object to a JSON string
+        })
+            .then(response => {
+                // Check if the request was successful
+                if (!response.ok) {
+                    throw new Error('Network response was not ok - '+response.json());
+                }
+                return response.json();
+            })
+            .then(data => {
+                // Handle the JSON data returned by the server (if any)
+                console.log(data);
+            })
+            .catch(error => {
+                // Handle errors, like network issues or invalid JSON
+                console.log('There was a problem with the fetch operation:', error.message);
+            });
+
+    }
+
+    postReq();
+
+</script>
+
+</html>
